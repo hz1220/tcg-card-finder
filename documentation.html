@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon TCG Card Finder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script type="module" src="src/home-init.js"></script>
+</head>
+
+<body>
+    <div class="columns is-flex-direction-column">
+
+        <app-header class="column is-narrow"></app-header>
+        <app-navbar class="column is-narrow"></app-navbar>
+
+        <div class="hero is-link p-2">
+          <div class="hero-head">
+            <p class="title has-text-centered has-text-warning">
+              Documentation
+            </p>
+            <h1 class="title has-text-centered has-text-warning">Checkpoint 1: Proposal</h1>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">API Used</h3>
+            <p class="has-text-centered is-underlined"><a href="https://pokemontcg.io/">Pokemon TCG API: https://pokemontcg.io/</a>
+            </p>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning" >Features</h3>
+            <ul style="display: block; margin-left: auto; margin-right: auto; width:49%; line-height: 200%;">
+              <li>
+                1. Search for a card through typing the Pokemon name.
+              </li>
+              <li>
+                2. Search for a card through typing the Pokemon type.
+              </li>
+              <li>
+                3. Search for a card through typing the Pokemon subtype.
+              </li>
+              <li>
+                4. Display all the currently available cards of the searched Pokemon and all of its stats.
+              </li>
+              <li>
+                5. Provide a link to TCGplayer for the user to purchase their chosen card.
+              </li>
+              <li>
+                6. Click on the "Favorite" icon to add the current card to the "Favorites" page for later uses.
+              </li>
+              <li>
+                7. Community page to show everyone's favorited cards, so users may take a card's popularity into consideration when building a deck.
+              </li>
+            </ul>
+            <img class="p-3" style="display: block; margin-left: auto; margin-right: auto; width:50%" src="images/layout.png" alt="layout">
+            <img class="p-3" style="display: block; margin-left: auto; margin-right: auto; width:50%" src="images/fav-layout.png" alt="fav-layout">
+            
+            <h1 class="title has-text-centered has-text-warning">Checkpoint 2</h1>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning ">Project Requirements:</h3>
+            <p class="has-text-centered is-underlined"><a href="https://github.com/tonethar/IGME-330-Spring-2022/blob/main/projects/p1-checkpoint-2.md">Checkpoint 2 Requirements</a>
+            </p>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">Resources Utilized:</h3>
+            <ul>
+              <li class="has-text-centered is-underlined">
+                <a href="https://fontawesome.com/v4/icon/bolt">Brand Icon</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://docs.pokemontcg.io/api-reference/cards/search-cards/">API Documentation</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://www.youtube.com/watch?v=5zcSpVKxMao">API and DOM Manipulation</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/sm-series/sm7/109/">Home Page Image</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://bulma.io/documentation/overview/start/">Bulma CSS Framework</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">Mozilla Dev Documentation</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://firebase.google.com/docs">Firebase Documentation</a>
+              </li>
+              <li class="has-text-centered is-underlined">
+                <a href="https://firebase.google.com/docs/firestore">FireStore Documentation</a>
+              </li>
+            </ul>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">API Used</h3>
+            <p class="has-text-centered is-underlined"><a href="https://pokemontcg.io/">Pokemon TCG API: https://pokemontcg.io/</a>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">Noteworthy</h3>
+            <ul style="display: block; margin-left: auto; margin-right: auto; width:49%; line-height: 200%;">
+              <li>
+                1. Everything is styled with Bulma and in hero.
+              </li>
+              <li>
+                2. When a card is searched, the app provides the user with a link to TCGplayer.com where they can see the price and availablity of the card for a quick purchase.
+              </li>
+              <li>
+                3. Home page has a detailed description of how to use them app, and corresponding buttons to get a user started.
+              </li>
+              <li>
+                4. The app fails graciously at every level, whether if the user click "Search" without an entry or a bad entry. Even block a card from being displayed if the data isn't complete.
+              </li>
+              <li>
+                5. All cards are displayed neatly and easy to see.
+              </li>
+              <li>
+                6. When a card is clicked, it will immediately become the top card with all of its stats displayed, and for the convenience of the users, the page will automatically return to the top.
+              </li>
+              <li>
+                7. Firebase storage was done with self-taught FireStore instead of Realtime database.
+              </li>
+            </ul>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">Grading</h3>
+            <ul style="display: block; margin-left: auto; margin-right: auto; width:49%; line-height: 200%;">
+              <li>
+                1. Required 4 pages, global navigation system, uses Bulma, uses a web service or data source.	✓
+              </li>
+              <li>
+                2. Every time the user clicks the search button, this App page WILL automatically save the last term searched by the user and the third control's UI state in the browser's localStorage. ✓
+              </li>
+              <li>
+                3. App-navbar, and have "you are here cues". ✓
+              </li>
+              <li>
+                4. Uses fetch() instead of XHR. ✓
+              </li>
+              <li>
+                5. Using Firebase with a "Community" page, which shows the favorites of ALL of the app's users. ✓
+              </li>
+              <li>
+                6. The app must be easy to use, with well-labeled and obvious controls. ✓
+              </li>
+              <li>
+                7. The app must always "let the user know what's going on" with activity indicators. ✓
+              </li>
+              <li>
+                8.The app must "fail gracefully" and errors must be communicated to the user. ✓
+              </li>
+              <li>
+                9. The app must have "Impact", serves a purpose, easy to use, functional, and aesthetically pleasing. ✓
+              </li>
+              <li>
+                10. I believe I fullfilled every requirement perfectly, and went even beyond with some of the features.
+              </li>
+            </ul>
+            <h3 class="has-text-centered is-size-5 has-text-weight-bold has-text-warning">To Do</h3>
+            <ul style="display: block; margin-left: auto; margin-right: auto; width:49%; line-height: 200%;">
+              <li>
+                1. Add different ways to sort the cards displayed on "app", "favorites", and "community" page.
+              </li>
+              <li>
+                2. Make the website look more "professional".
+              </li>
+              <li>
+                3. When displaying cards on the "app" page, seperate the cards into different pages to reduce load time.
+              </li>
+            </ul>
+          </div>
+          <app-footer class="column is-narrow"></app-footer>
+        </div>
+
+    </div>
+</body>
+
+</html>
+</html>
